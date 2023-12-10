@@ -1,106 +1,62 @@
-# Dictoat
+# Modipy
 
-Dictoat is a Python utility designed to simplify accessing data stored in dictionaries. It converts dictionaries into Python objects, allowing for more intuitive access to data via attributes instead of dictionary keys. This is ideal for projects where readability and ease of access to complex data structures are essential.
+Modipy is a Python tool that allows you to track modifications made to files or directories. Ideal for projects where monitoring changes in files is crucial, Modipy offers a simple and efficient way to get information on when files were last modified.
 
 ## Installation
 
-You can easily install `Dictoat` using pip:
+You can easily install `modipy` using pip:
 
 ```bash
-pip install dictoat
+pip install modipy
 ```
 
 ## Usage
 
-To use Dictoat, simply import the `Dictoat` class in your Python project and pass a dictionary as an argument. For example:
+To use Modipy, first import the Cop class into your Python project and then follow these steps:
 
 ```python
-from dictoat import Dictoat
+from modipy import Cop
 
-# Example of using Dictoat
-apple_dict = {"color": "red", "dimentions": {"weigh": 185, "radius": 5, "units": ["g", "cm"]}}
-apple = Dictoat(apple_dict)
+# Create an instance of the Cop class for a specific directory or file and save the current state of files
+directory = Cop("your/directory/path")
+directory.prev_revision()
 
-# Accessing the data
-print(apple.color_)
-print(apple.dimentions_.radius_)
-print(apple.dimentions_.units_)
+# Making changes in the directory files...
+
+# Check and get a list of the modified files
+directory.post_revision()
 ```
+# Outputs
+Depending on whether a path to a folder or a specific file is given, you can get different outputs:
 
-The output would show:
+For a folder path:
 ```markdown
-red
-5
-['g', 'cm']
+No file was modified in your/directory/path
+```
+and
+```markdown
+Modified files in your/directory/path:
+file_1.py, 1.23 seconds ago.
+text_1.txt, 4.56 seconds ago.
 ```
 
-Or a more complete example:
-
-```python
-from dictoat import Dictoat
-
-pokedex_dict = {
-    "total_pokemons": 2,
-    "region": "Kanto",
-    "Pokemons": {
-        "Pikachu": {
-            "type": "Electric",
-            "abilities": ["Static", "Lightning Rod"],
-            "stats": {
-                "hp": 35,
-                "attack": 55,
-                "defense": 40
-            }
-        },
-        "Squirtle": {
-            "type": "Water",
-            "abilities": ["Torrent", "Rain Dish"],
-            "stats": {
-                "hp": 44,
-                "attack": 48,
-                "defense": 65
-            },
-            "evolutions": ["Wartortle", "Blastoise"]
-        }
-    }
-}
-
-pokedex = Dictoat(pokedex_dict)
-
-# Accessing the data
-print("Total Pokémon in Pokedex:", pokedex.total_pokemons_)
-print("Pokedex Region:", pokedex.region_)
-
-print("Pikachu Type:", pokedex.Pokemons_.Pikachu_.type_)
-print("Pikachu Abilities:", pokedex.Pokemons_.Pikachu_.abilities_)
-print("Pikachu HP:", pokedex.Pokemons_.Pikachu_.stats_.hp_)
-
-print("Squirtle Type:", pokedex.Pokemons_.Squirtle_.type_)
-print("Squirtle Abilities:", pokedex.Pokemons_.Squirtle_.abilities_)
-print("Squirtle Defense:", pokedex.Pokemons_.Squirtle_.stats_.defense_)
-print("Squirtle Evolutions:", pokedex.Pokemons_.Squirtle_.evolutions_)
-```
-
-With its output being:
+For an individual file path:
 
 ```markdown
-Total Pokémon in Pokedex: 2
-Pokedex Region: Kanto
-
-Pikachu Type: Electric
-Pikachu Abilities: ['Static', 'Lightning Rod']
-Pikachu HP: 35
-
-Squirtle Type: Water
-Squirtle Abilities: ['Torrent', 'Rain Dish']
-Squirtle Defense: 65
-Squirtle Evolutions: ['Wartortle', 'Blastoise']
+No modifications in file_1.py
+```
+and
+```markdown
+file_1.py modified 7.89 seconds ago.
 ```
 
 ## Features
 
-- **Simple Conversion**: Converts any dictionary into an object for easier access.
-- **Deep Nesting Support**: Supports nested dictionaries, creating sub-objects for each level.
+- **Modification Tracking**: Allows tracking of the latest modifications of files or directories.
+- **Easy to Use**: A simple and straightforward interface for reviewing file changes.
+
+## Reminder
+Before using `post_revision()`, it's important to call `prev_revision()` to save the current state of the files. This ensures that `post_revision()` can accurately detect and report any changes made.
 
 ## Contributions
 

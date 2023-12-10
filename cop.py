@@ -9,7 +9,7 @@ class Cop:
     def prev_revision(self):
         self.modificaciones_previas = self._revisar_modificaciones()
 
-    def post_revision(self, print_output=False):
+    def post_revision(self, print_output=True):
         modificaciones_actuales = self._revisar_modificaciones()
         archivos_modificados = self._comparar_modificaciones(modificaciones_actuales)
         if print_output:
@@ -40,9 +40,9 @@ class Cop:
         if os.path.isfile(self.path):
             if len(archivos_modificados) > 0:
                 archivo, tiempo = archivos_modificados[0]
-                print(f"File modified {tiempo:.2f} seconds ago.")
+                print(f"{archivo} modified {tiempo:.2f} seconds ago.")
             else:
-                print(f"No modifications to {self.path}")
+                print(f"No modifications in {self.path}")
         else:
             if len(archivos_modificados) != 0:
                 print(f'Modified files in {self.path}:')
