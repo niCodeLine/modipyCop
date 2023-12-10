@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='modipy',
-    version='0.1',
+    name='modipyCop',
+    version='1.0',
     packages=find_packages(),
     description='Track modification made to file/s.',
     long_description=open('README.md').read(),
