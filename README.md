@@ -60,7 +60,7 @@ Before using `post_revision()`, it's important to call `prev_revision()` to save
 
 ## Contributions
 
-Contributions are welcome! If you have improvements or fixes, please send a pull request or open an issue in the GitHub repository.
+Contributions are welcome! If you have improvements or fixes, please feel free to send a pull request or open an issue in the GitHub repository.
 
 ## License
 
