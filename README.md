@@ -26,8 +26,9 @@ directory.prev_revision()
 # Check and get a list of the modified files
 directory.post_revision()
 ```
-# Outputs
+### Outputs
 Depending on whether a path to a folder or a specific file is given, you can get different outputs:
+
 
 For a folder path:
 ```markdown
@@ -39,6 +40,7 @@ Modified files in your/directory/path:
 file_1.py, 1.23 seconds ago.
 text_1.txt, 4.56 seconds ago.
 ```
+
 
 For an individual file path:
 
