@@ -1,21 +1,21 @@
-# Modipy
+# ModipyCop
 
-Modipy is a Python tool that allows you to track modifications made to files or directories. Ideal for projects where monitoring changes in files is crucial, Modipy offers a simple and efficient way to get information on when files were last modified.
+ModipyCop is a Python tool that allows you to track modifications made to files or directories. Ideal for projects where monitoring changes in files is crucial, ModipyCop offers a simple and efficient way to get information on when files were last modified.
 
 ## Installation
 
-You can easily install `modipy` using pip:
+You can easily install `modipyCop` using pip:
 
 ```bash
-pip install modipy
+pip install modipyCop
 ```
 
 ## Usage
 
-To use Modipy, first import the Cop class into your Python project and then follow these steps:
+To use ModipyCop, first import the Cop class into your Python project and then follow these steps:
 
 ```python
-from modipy import Cop
+from modipyCop import Cop
 
 # Create an instance of the Cop class for a specific directory or file and save the current state of files
 directory = Cop("your/directory/path")
