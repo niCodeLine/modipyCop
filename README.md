@@ -50,6 +50,7 @@ No file was modified in your/directory/path
 and
 ```markdown
 Modified files in your/directory/path:
+
 file_1.py, 1.23 seconds ago.
 text_1.txt, 4.56 seconds ago.
 ```
