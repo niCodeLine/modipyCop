@@ -1,4 +1,3 @@
-# %%
 import os
 import time
 from typing import Callable
@@ -54,6 +53,11 @@ class Cop:
                 print(f"No file was modified in {self.path}")
 
 def decoprator(path: str) -> Callable:
+    """
+    Decorator that prints if there were any changes in a directory.
+    
+    :param path: Path to the folder or file that wants to be vigilated.
+    """
     c = Cop(path)
     def decorator(func: Callable):
         def wrapper(*args, **kwargs):
@@ -63,5 +67,3 @@ def decoprator(path: str) -> Callable:
             return result
         return wrapper
     return decorator
-
-# %%

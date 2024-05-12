@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='modipyCop',
-    version='1.1',
+    version='1.2',
     packages=find_packages(),
     description='Track modification made to file/s.',
     long_description=open('README.md').read(),
