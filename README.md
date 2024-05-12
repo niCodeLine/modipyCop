@@ -26,6 +26,18 @@ directory.prev_revision()
 # Check and get a list of the modified files
 directory.post_revision()
 ```
+
+It can also be used as decorator:
+
+```python
+from modipyCop import decoprator
+
+@decoprator('your/directory/path')
+def some_function(var,var_1):
+    # some_function code...
+
+```
+
 ## Outputs
 Depending on whether a path to a folder or a specific file is given, you can get different outputs:
 
@@ -56,7 +68,7 @@ file_1.py modified 7.89 seconds ago.
 
 - **Modification Tracking**: Allows tracking of the latest modifications of files or directories.
 - **Easy to Use**: A simple and straightforward interface for reviewing file changes.
-
+- **Usable as Decorator**: Avoid unneceserly writing and use the decorator module.
 ## Reminder
 Before using `post_revision()`, it's important to call `prev_revision()` to save the current state of the files. This ensures that `post_revision()` can accurately detect and report any changes made.
 
