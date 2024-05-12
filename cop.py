@@ -47,7 +47,7 @@ class Cop:
                 print(f"No modifications in {self.path}")
         else:
             if len(archivos_modificados) != 0:
-                print(f'Modified files in {self.path}:')
+                print(f'Modified files in {self.path}:\n')
                 for archivo, tiempo in archivos_modificados:
                     print(f"{archivo}, {tiempo:.2f} seconds ago.")
             else:

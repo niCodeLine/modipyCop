@@ -17,7 +17,8 @@ To use ModipyCop, first import the Cop class into your Python project and then f
 ```python
 from modipyCop import Cop
 
-# Create an instance of the Cop class for a specific directory or file and save the current state of files
+# Create an instance of the Cop class for a specific 
+# directory or file and save the current state of files
 directory = Cop("your/directory/path")
 directory.prev_revision()
 
@@ -27,7 +28,7 @@ directory.prev_revision()
 directory.post_revision()
 ```
 
-It can also be used as decorator:
+Or be used as decorator:
 
 ```python
 from modipyCop import decoprator
