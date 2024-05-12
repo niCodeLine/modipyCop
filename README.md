@@ -73,7 +73,8 @@ file_1.py modified 7.89 seconds ago.
 - **Usable as Decorator**: Avoid unneceserly writing and use the decorator module.
 
 ## Reminder
-Before using `post_revision()`, it's important to call `prev_revision()` to save the current state of the files. This ensures that `post_revision()` can accurately detect and report any changes made. 
+Before using `post_revision()`, it's important to call `prev_revision()` to save the current state of the files. This ensures that `post_revision()` can accurately detect and report any changes made.
+
 *You can forget this concern by just using the decoprator as a decorator.*
 
 ## Contributions
