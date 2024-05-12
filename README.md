@@ -28,7 +28,7 @@ directory.prev_revision()
 directory.post_revision()
 ```
 
-Or be used as decorator:
+Or be used as a decorator:
 
 ```python
 from modipyCop import decoprator
