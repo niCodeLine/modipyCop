@@ -75,7 +75,7 @@ file_1.py modified 7.89 seconds ago.
 ## Reminder
 Before using `post_revision()`, it's important to call `prev_revision()` to save the current state of the files. This ensures that `post_revision()` can accurately detect and report any changes made.
 
-**You can forget about this concern by just using the decoprator module as a decorator.**
+*You can forget about this concern by just using the decoprator module as a decorator.*
 
 ## Contributions
 
