@@ -9,6 +9,12 @@ You can easily install `modipyCop` using pip:
 ```bash
 pip install modipyCop
 ```
+or via git:
+
+```bash
+git clone https://github.com/niCodeLine/modipyCop.git
+```
+or just copy-paste it in your code.
 
 ## Usage
 

@@ -1,1 +1,0 @@
-from .cop import Cop
