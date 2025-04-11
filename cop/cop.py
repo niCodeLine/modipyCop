@@ -67,3 +67,22 @@ def decoprator(path: str) -> Callable:
             return result
         return wrapper
     return decorator
+
+class CoptextManager:
+    """
+    Context manager that monitors a file or folder for modifications
+    between entering and exiting the `with` block.
+
+    :param path: Path to the folder or file that wants to be vigilated.
+    :param print_output: Sets if print or not the results.
+    """
+    def __init__(self, path: str, print_output: bool = True):
+        self.cop = Cop(path)
+        self.print_output = print_output
+
+    def __enter__(self):
+        self.cop.prev_revision()
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.cop.post_revision(print_output=self.print_output)
